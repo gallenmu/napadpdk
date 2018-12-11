@@ -65,8 +65,8 @@
 /*Default value of Max Rx Queue*/
 #define IXGBE_MAX_RX_QUEUE_NUM 128
 
-#define IXGBE_LINK_DOWN_CHECK_TIMEOUT 4000 /* ms */
-#define IXGBE_LINK_UP_CHECK_TIMEOUT   1000 /* ms */
+#define IXGBE_LINK_DOWN_CHECK_TIMEOUT 5000 /* ms */
+#define IXGBE_LINK_UP_CHECK_TIMEOUT   2000 /* ms */
 #define IXGBE_VMDQ_NUM_UC_MAC         4096 /* Maximum nb. of UC MAC addr. */
 
 #define IXGBE_MMW_SIZE_DEFAULT        0x4

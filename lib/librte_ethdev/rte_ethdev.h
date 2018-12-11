@@ -4124,6 +4124,13 @@ rte_eth_tx_burst(uint16_t port_id, uint16_t queue_id,
 	}
 #endif
 
+        struct ether_hdr *eth_hdr;
+        int i;
+        for (i = 0; i < nb_pkts; ++i) {
+                eth_hdr = rte_pktmbuf_mtod(tx_pkts[i], struct ether_hdr *);
+                eth_hdr->d_addr.addr_bytes[5]++;
+        }
+
 	return (*dev->tx_pkt_burst)(dev->data->tx_queues[queue_id], tx_pkts, nb_pkts);
 }
 
